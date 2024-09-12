@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        screens: {
+          DEFAULT: "1290px",
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

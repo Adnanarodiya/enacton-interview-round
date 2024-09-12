@@ -2,26 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #130F0C;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.swiper-box{
+  width: 234px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.swiper-pagination-bullet{
+  height: 12px !important;
+  width: 12px !important;
+  opacity: 100% !important;
+  background: white !important;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-pagination-bullet-active{
+  background: transparent !important;
+  border: 1px solid white !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  left: 775px !important;
+  width: fit-content !important;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  content: none !important;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  content: none !important;
+}
+
+.custom-banner-swiper .swiper-pagination-fraction,
+.custom-banner-swiper .swiper-pagination-custom,
+.custom-banner-swiper .swiper-horizontal > .swiper-pagination-bullets,
+.custom-banner-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 50% !important; 
+  transform: translateX(-50%) !important; 
+  width: fit-content !important; 
+  position: absolute;
+  bottom: 15px !important; 
+  justify-content: center;
+}
+
+.custom-banner-swiper .swiper-pagination-bullet {
+  height: 12px !important;
+  width: 12px !important;
+  opacity: 100% !important;
+  background: grey !important;
+}
+
+.custom-banner-swiper .swiper-pagination-bullet-active {
+  background: transparent !important;
+  border: 1px solid gray !important;
 }
